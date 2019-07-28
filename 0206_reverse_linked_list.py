@@ -6,6 +6,18 @@ class Solution:
         prev = None
         curr = head
         while curr:
+            temp = curr.next
+            curr.next = prev
+            prev = curr
+            curr = temp
+        return prev
+
+
+    # my lengthy solution that do two nodes at once
+    def reverseList(self, head: ListNode) -> ListNode:
+        prev = None
+        curr = head
+        while curr:
             next = curr.next
             if next:
                 curr.next = prev
