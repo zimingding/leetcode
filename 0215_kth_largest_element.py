@@ -15,7 +15,6 @@ class Solution:
                 r = q - 1
 
     def partition(self, nums: List[int], p: int, r: int) -> int:
-        temp = []
         i = p
         for j in range(i, r):
             if nums[j] < nums[r]:
